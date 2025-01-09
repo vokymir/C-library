@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 
 project(C_lib VERSION 0.0.1)
+set (PROJECT_TYPE SHARED) # options are SHARED or STATIC
 
 # Set the output path for the build, provides cleaner output
 set(OS_BITNESS 32)
@@ -33,6 +34,6 @@ add_executable(${PROJECT_NAME} ${SOURCE_DIR}/main.c)
 
 # Add all libraries
 foreach(LIBRARY ${LIBRARIES})
-    add_library(${LIBRARY} SHARED ${SOURCE_DIR}/${LIBRARY}/${LIBRARY}.c)
+    add_library(${LIBRARY} ${PROJECT_TYPE} ${SOURCE_DIR}/${LIBRARY}/${LIBRARY}.c)
     target_link_libraries(${PROJECT_NAME} ${LIBRARY})
 endforeach(LIBRARY ${LIBRARIES})
