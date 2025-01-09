@@ -14,4 +14,12 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${FullOutputDir}/static_libs")
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${FullOutputDir}")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${FullOutputDir}")
 
+# Include the source directory
+include_directories(.)
+
+add_library(lib SHARED src/lib/lib.c)
+
+
 add_executable(${PROJECT_NAME} src/main.c)
+
+target_link_libraries(${PROJECT_NAME} lib)

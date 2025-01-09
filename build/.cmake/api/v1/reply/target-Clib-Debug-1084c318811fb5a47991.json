@@ -10,7 +10,9 @@
 	{
 		"commands" : 
 		[
-			"add_executable"
+			"add_executable",
+			"target_link_libraries",
+			"include_directories"
 		],
 		"files" : 
 		[
@@ -24,7 +26,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 17,
+				"line" : 23,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 25,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 18,
 				"parent" : 0
 			}
 		]
@@ -38,11 +52,25 @@
 					"fragment" : "-g"
 				}
 			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 3,
+					"path" : "/home/javok/Desktop/School/C-library/."
+				}
+			],
 			"language" : "C",
 			"sourceIndexes" : 
 			[
 				0
 			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "lib::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "Clib::@6890427a1f51a3e7e1df",
@@ -57,6 +85,15 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/home/javok/Desktop/School/C-library/bin/Linux64/Debug",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "/home/javok/Desktop/School/C-library/bin/Linux64/Debug/liblib.so",
+				"role" : "libraries"
 			}
 		],
 		"language" : "C"
