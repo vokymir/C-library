@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.10)
 
 project(C_lib VERSION 0.0.1)
-set (PROJECT_TYPE SHARED) # options are SHARED or STATIC
+set (PROJECT_TYPE STATIC) # options are SHARED or STATIC
 
 #==========BIN & WIN SUPPORT==========
 # Set the output path for the build, provides cleaner output

@@ -18,13 +18,13 @@
 
 # Libraries
 *.lib
-*.a
+# *.a #Commented because it is used for static libraries in bin
 *.la
 *.lo
 
 # Shared objects (inc. Windows DLLs)
 *.dll
-*.so
+# *.so #Commented because it is used for libraries in bin
 *.so.*
 *.dylib
 
