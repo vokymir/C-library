@@ -28,7 +28,7 @@
 					[
 						0
 					],
-					"name" : "Clib",
+					"name" : "C_lib",
 					"targetIndexes" : 
 					[
 						0,
@@ -40,15 +40,15 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "Clib::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Clib-Debug-1084c318811fb5a47991.json",
-					"name" : "Clib",
+					"id" : "C_lib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-C_lib-Debug-db755d347324e40f01e0.json",
+					"name" : "C_lib",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "lib::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-lib-Debug-700b022f060b329c7b5d.json",
+					"jsonFile" : "target-lib-Debug-160f2eb12eb0d0a4ef18.json",
 					"name" : "lib",
 					"projectIndex" : 0
 				}

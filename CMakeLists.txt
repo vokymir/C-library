@@ -1,25 +1,38 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(Clib)
+project(C_lib VERSION 0.0.1)
 
-# Set the output path for the build
-set(OSBitness 32)
+# Set the output path for the build, provides cleaner output
+set(OS_BITNESS 32)
 if(CMAKE_SIZEOF_VOID_P EQUAL 8)
-    set(OSBitness 64)
+    set(OS_BITNESS 64)
 endif()
-set(FullOutputDir "${CMAKE_SOURCE_DIR}/bin/${CMAKE_SYSTEM_NAME}${OSBitness}/${CMAKE_BUILD_TYPE}")
+set(FULL_OUTPUT_DIR "${CMAKE_SOURCE_DIR}/bin/${CMAKE_SYSTEM_NAME}${OS_BITNESS}/${CMAKE_BUILD_TYPE}")
 
 # Set the output directory for the build
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${FullOutputDir}/static_libs")
-set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${FullOutputDir}")
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${FullOutputDir}")
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${FULL_OUTPUT_DIR}/static_libs")
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${FULL_OUTPUT_DIR}")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${FULL_OUTPUT_DIR}")
+
+# Ensure windows build
+if(MSVC)
+    set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
+endif()
 
 # Include the source directory
-include_directories(.)
+set(SOURCE_DIR "${CMAKE_SOURCE_DIR}/src")
+include_directories(${SOURCE_DIR})
 
-add_library(lib SHARED src/lib/lib.c)
+# Set all libraries which should be built
+set(LIBRARIES
+    lib
+)
 
+# Add the main executable
+add_executable(${PROJECT_NAME} ${SOURCE_DIR}/main.c)
 
-add_executable(${PROJECT_NAME} src/main.c)
-
-target_link_libraries(${PROJECT_NAME} lib)
+# Add all libraries
+foreach(LIBRARY ${LIBRARIES})
+    add_library(${LIBRARY} SHARED ${SOURCE_DIR}/${LIBRARY}/${LIBRARY}.c)
+    target_link_libraries(${PROJECT_NAME} ${LIBRARY})
+endforeach(LIBRARY ${LIBRARIES})

@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "/home/javok/Desktop/School/C-library/bin/Linux64/Debug/Clib"
+			"path" : "/home/javok/Desktop/School/C-library/bin/Linux64/Debug/C_lib"
 		}
 	],
 	"backtrace" : 1,
@@ -26,19 +26,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 23,
+				"line" : 32,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 25,
+				"line" : 37,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 18,
+				"line" : 24,
 				"parent" : 0
 			}
 		]
@@ -56,7 +56,7 @@
 			[
 				{
 					"backtrace" : 3,
-					"path" : "/home/javok/Desktop/School/C-library/."
+					"path" : "/home/javok/Desktop/School/C-library/src"
 				}
 			],
 			"language" : "C",
@@ -73,7 +73,7 @@
 			"id" : "lib::@6890427a1f51a3e7e1df"
 		}
 	],
-	"id" : "Clib::@6890427a1f51a3e7e1df",
+	"id" : "C_lib::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -98,8 +98,8 @@
 		],
 		"language" : "C"
 	},
-	"name" : "Clib",
-	"nameOnDisk" : "Clib",
+	"name" : "C_lib",
+	"nameOnDisk" : "C_lib",
 	"paths" : 
 	{
 		"build" : ".",
