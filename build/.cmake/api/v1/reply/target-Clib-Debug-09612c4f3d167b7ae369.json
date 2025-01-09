@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "bin/Linux64/Debug/Clib"
+			"path" : "/home/javok/Desktop/School/C-library/bin/Linux64/Debug/Clib"
 		}
 	],
 	"backtrace" : 1,
