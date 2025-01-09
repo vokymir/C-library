@@ -37,7 +37,10 @@ include_directories(${SOURCE_DIR})
 
 # Set all libraries which should be built
 set(LIBRARIES
-    lib
+    stack
+    queue
+    list
+    matrix
 )
 
 # Add the main executable
