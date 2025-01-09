@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 3.10)
 project(C_lib VERSION 0.0.1)
 set (PROJECT_TYPE SHARED) # options are SHARED or STATIC
 
+#==========BIN & WIN SUPPORT==========
 # Set the output path for the build, provides cleaner output
 set(OS_BITNESS 32)
 if(CMAKE_SIZEOF_VOID_P EQUAL 8)
@@ -19,6 +20,16 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${FULL_OUTPUT_DIR}")
 if(MSVC)
     set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
 endif()
+
+#==========TESTING==========
+include(CTest)
+enable_testing()
+
+#==========MACROS==========
+add_compile_definitions(IFDEFINE) # Define a macro
+add_compile_definitions(OTHER_DEFINE=4) # Define a macro with a value
+
+#==========INCLUDES & LIBRARIES==========
 
 # Include the source directory
 set(SOURCE_DIR "${CMAKE_SOURCE_DIR}/src")

@@ -65,6 +65,7 @@ CTestTestfile.cmake
 _deps
 CMakeUserPresets.json
 .cmake
+build
 
 # Local files
 .vscode
